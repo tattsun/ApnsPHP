@@ -190,7 +190,7 @@ abstract class ApnsPHP_Abstract
 	/**
 	 * Set the write interval.
 	 *
-	 * After each socket write operation we are sleeping for this 
+	 * After each socket write operation we are sleeping for this
 	 * time interval. To speed up the sending operations, use Zero
 	 * as parameter but some messages may be lost.
 	 *
@@ -379,7 +379,7 @@ abstract class ApnsPHP_Abstract
 		 * @see http://php.net/manual/en/context.ssl.php
 		 */
 		$streamContext = stream_context_create(array('ssl' => array(
-			'verify_peer' => isset($this->_sRootCertificationAuthorityFile),
+//			'verify_peer' => isset($this->_sRootCertificationAuthorityFile),
 			'cafile' => $this->_sRootCertificationAuthorityFile,
 			'local_cert' => $this->_sProviderCertificateFile
 		)));
